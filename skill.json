@@ -1,0 +1,41 @@
+{
+  "name": "genpark-algorithmic-ppc-bid-pace-optimizer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Algorithmic PPC bid pace optimizer adjusting intraday target ROAS bids based on conversion velocity and budget consumption curves.",
+  "author": "genpark",
+  "category": "ppc-automation",
+  "tags": [
+    "ppc-bidding",
+    "bid-pacing",
+    "target-roas",
+    "search-ads",
+    "algorithmic-bidding"
+  ],
+  "inputs": {
+    "campaign_target_roas": {
+      "type": "number"
+    },
+    "current_hourly_spend_usd": {
+      "type": "number"
+    },
+    "remaining_daily_budget_usd": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "bid_decision_id": {
+      "type": "string"
+    },
+    "adjusted_cpc_bid_multiplier": {
+      "type": "number"
+    },
+    "projected_eod_budget_utilization_pct": {
+      "type": "number"
+    },
+    "bid_adjustment_telemetry_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
